@@ -106,3 +106,51 @@ button:hover {
     max-width: 900px;
     box-sizing: border-box;
 }
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-hover-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.image-hover-container img {
+    transition: transform 0.5s ease-in-out;
+    display: block;
+    max-width: 100%;
+}
+
+.image-hover-text {
+    position: absolute;
+    top: 0;
+    left: -100%; /* ซ่อนกรอบข้อความไว้ด้านซ้าย */
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    transition: left 0.5s ease-in-out; /* ทำให้ข้อความเลื่อนออกมานุ่มนวล */
+}
+
+.image-hover-container:hover img {
+    transform: translateX(20%); /* เลื่อนรูปภาพไปทางขวา */
+}
+
+.image-hover-container:hover .image-hover-text {
+    left: 0; /* แสดงข้อความออกมาจากด้านซ้าย */
+}
