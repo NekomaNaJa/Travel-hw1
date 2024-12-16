@@ -33,11 +33,6 @@
     max-width: 800px;
     margin: 0 auto;
    }
-   .mainA {
-    padding: 2rem;
-    max-width: 100%;
-    margin: 0 auto;
-   }
    footer {
     background: #333;
     color: #fff;
@@ -138,7 +133,7 @@ button:hover {
 .image-hover-text {
     position: absolute;
     top: 0;
-    left: -100%; /* ซ่อนกรอบข้อความไว้ด้านซ้าย */
+    left: -100%;
     width: 50%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
@@ -149,13 +144,49 @@ button:hover {
     text-align: center;
     padding: 1rem;
     box-sizing: border-box;
-    transition: left 0.5s ease-in-out; /* ทำให้ข้อความเลื่อนออกมานุ่มนวล */
+    transition: left 0.5s ease-in-out;
 }
 
 .image-hover-container:hover img {
-    transform: translateX(20%); /* เลื่อนรูปภาพไปทางขวา */
+    transform: translateX(20%);
 }
 
 .image-hover-container:hover .image-hover-text {
-    left: 0; /* แสดงข้อความออกมาจากด้านซ้าย */
+    left: 0;
 }
+
+.mainA {
+    display: flex; /* ใช้ Flexbox */
+    max-width: 100%;
+    flex-direction: column; /* จัดเรียงเนื้อหาแนวตั้ง */
+    justify-content: center; /* จัดให้อยู่กลางแนวตั้ง */
+    align-items: center; /* จัดให้อยู่กลางแนวนอน */
+    min-height: 100vh; /* ให้พื้นที่เต็มหน้าจอ */
+    text-align: center;
+    padding: 2rem;
+}
+
+.mainA div {
+    display: flex; /* ใช้ Flexbox กับรูปภาพและข้อความ */
+    align-items: center; /* จัดให้อยู่กึ่งกลางแนวตั้งภายในแถว */
+    gap: 20px; /* เพิ่มระยะห่างระหว่างรูปภาพกับข้อความ */
+    max-width: 1200px; /* กำหนดความกว้างสูงสุด */
+}
+
+.pi {
+    width: 600px; /* กำหนดขนาดรูปภาพ */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.t {
+    flex: 1; /* ให้ข้อความใช้พื้นที่ที่เหลือ */
+    background-color: rgba(190, 161, 161, 0.836);
+    padding: 1.5rem;
+    border-radius: 10px;
+    line-height: 1.6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: justify; /* จัดข้อความชิดขอบทั้งสองด้าน */
+}
+
