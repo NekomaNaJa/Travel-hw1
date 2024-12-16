@@ -100,4 +100,9 @@ button:hover {
     border: 1px solid #ddd;
     border-radius: 20px;
     background-color: #f8f8f8;
+    text-align: justify;
+    line-height: 1.8;
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
 }
