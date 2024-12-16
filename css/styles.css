@@ -33,6 +33,11 @@
     max-width: 800px;
     margin: 0 auto;
    }
+   .mainA {
+    padding: 2rem;
+    max-width: 100%;
+    margin: 0 auto;
+   }
    footer {
     background: #333;
     color: #fff;
